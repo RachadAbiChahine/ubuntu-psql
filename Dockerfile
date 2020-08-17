@@ -5,6 +5,7 @@ FROM ubuntu:20.04
 RUN \
   apt-get update && \
   apt-get install -y apt-utils git vim curl postgresql-client && \
+  apt-get install -y telnet iputils-ping iproute2
   rm -rf /var/lib/apt/lists/*
 # Set environment variables.
 ENV HOME /root
