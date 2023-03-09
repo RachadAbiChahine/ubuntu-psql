@@ -47,6 +47,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: rachadac/${{ steps.meta.outputs.tags[1] }}
+          tags: rachadac/${{ steps.meta.outputs.tags.[0] }}
 
 
