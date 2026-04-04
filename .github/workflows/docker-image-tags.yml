@@ -10,7 +10,7 @@
 name: Publish tag
 
 on:
-  create:
+  push:
     tags:
       - v*
   workflow_dispatch:
