@@ -10,11 +10,11 @@
 name: Push Docker image to Docker Hub ( latest)
 
 on:
+  push:
+    branches:
+      - master
   schedule:
-    - push:
-        branches:
-          - master
-    - cron: '59 23 * * *'
+        - cron: '59 23 * * *'
   workflow_dispatch:
 
 jobs:
