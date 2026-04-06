@@ -11,6 +11,9 @@ name: Push Docker image to Docker Hub ( latest)
 
 on:
   schedule:
+    - push:
+        branches:
+          - master
     - cron: '59 23 * * *'
   workflow_dispatch:
 
@@ -20,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v2.1.0
